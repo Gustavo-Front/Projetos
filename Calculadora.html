@@ -1,127 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale= ">
         <title>Calculadora</title> 
-        <style>
-            *{margin: 0;
-            padding: 0;}
+            <style>
+                *{margin: 0;
+                padding: 0;}
 
-            .fundo{
-                background-color: rgb(160, 155, 154);
-                height: 100vh;
-                color: rgb(15, 14, 14);
-                font-family: 'Courier New', Courier, monospace;
-                text-align: center;
-            }
+                .fundo{
+                    background-color: rgb(160, 155, 154);
+                    height: 100vh;
+                    color: rgb(15, 14, 14);
+                    font-family: 'Courier New', Courier, monospace;
+                    text-align: center;
+                        }
 
-            .Calculadora {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                background-color: black;
-                color: rgb(223, 7, 7);
-                transform: translate(-50%,-50%);
-                border-radius: 15px;
-                padding: 15px;
-            }
+                .Calculadora {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: black;
+                    color: rgb(223, 7, 7);
+                    transform: translate(-50%,-50%);
+                    border-radius: 15px;
+                    padding: 15px;
+                            }
 
-            .botão{
-                height: 50px;
-                width: 50px;
-                font-size: 20px;
-                cursor: pointer;
-                border: none;
-                color: rgb(216, 5, 33);
-                margin: 3px;
-            }
-            .botão:hover{
-                background-color: rgb(119, 70, 70);
-            }
+                .botão{
+                    height: 50px;
+                    width: 50px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    border: none;
+                    color: rgb(216, 5, 33);
+                    margin: 3px;
+                     }
 
-            #Resultado {
-                background-color: white;
-                width: 207px;
-                height: 40px;
-                margin: 10px;
-                font-size: 25px;
-                text-align: right;
+                .botão:hover{
+                     background-color: rgb(167, 139, 139);
+                            }
 
+                #Resultado {
+                    background-color: white;
+                    width: 207px;
+                    height: 40px;
+                    margin: 10px;
+                    font-size: 25px;
+                    text-align: right;
+                            }
 
-            }
-
-        </style> 
+            </style> 
     </head>
-    <body>
-        <div class="fundo">
-        <h1>Gustavo Pinheiro</h1>
-        <div class="Calculadora">
-            <h1>Calculadora </h1>
-            <p id="Resultado"></p>
-        <table>
-            <tr>
-                <td><button class="botão" onclick="clean('')">C</button></td>
-                <td><button class="botão" onclick="back('<')"><</button></td>
-                <td><button class="botão" onclick="insert('/')">/</button></td>
-                <td><button class="botão" onclick="insert('*')">X</button></td>
-            </tr>
-            
-            <tr>
-                <td><button class="botão" onclick="insert('7')">7</button></td>
-                <td><button class="botão" onclick="insert('8')">8</button></td>
-                <td><button class="botão" onclick="insert('9')">9</button></td>
-                <td><button class="botão" onclick="insert('-')">-</button></td>
-            </tr>
-            
-            <tr>
-                <td><button class="botão"  onclick="insert('4')">4</button></td>
-                <td><button class="botão"  onclick="insert('5')">5</button></td>
-                <td><button class="botão"  onclick="insert('6')">6</button></td>
-                <td><button class="botão"  onclick="insert('+')">+</button></td>
-            </tr>
-            
-            <tr>
-                <td><button class="botão"  onclick="insert('1')">1</button></td>      
-                <td><button class="botão"  onclick="insert('2')">2</button></td>
-                <td><button class="botão"  onclick="insert('3')">3</button></td>
-                <td rowspan="2"><button class="botão"  onclick="calcular('=')" style="height:106px;">=</button></td>
-            </tr>
-            
-            <tr>
-                <td colspan="2"><button class="botão" onclick="insert ('0')" style="width:106px;">0</button></td>
-                <td><button class="botão" onclick="insert('.')">.</button></td>
-            
-        </table>
-        </div>
-        </div> 
-        <script>
-            function insert(num)
-            {
-            var numero= document.getElementById('Resultado').innerHTML;
-            document.getElementById('Resultado').innerHTML = numero + num  
-            }
-            function clean()
-            {
-                document. getElementById('Resultado'). innerHTML="";
-        
-            }
-            function back()
-            {
-                var Resultado = document. getElementById('Resultado').innerHTML;
-                document.getElementById('Resultado').innerHTML=Resultado.substring(0, Resultado.length -1);
-            }
-            
-            function calcular()
-            {
-                var Resultado = document. getElementById('Resultado').innerHTML;
-                if(Resultado)
-                {
-                document. getElementById('Resultado').innerHTML= eval(Resultado);
-                }
-            }
+            <body>
+                    <div class="fundo">
+                        <h1>Gustavo Pinheiro</h1>
+                        <div class="Calculadora">
+                        <h1>Calculadora </h1>
+                        <p id="Resultado"></p>
 
-        </script>
-    </body>
+                    <table>
+                        <tr>
+                            <td><button class="botão" onclick="clean('')">C</button></td>
+                            <td><button class="botão" onclick="back('<')"><</button></td>
+                            <td><button class="botão" onclick="insert('/')">/</button></td>
+                            <td><button class="botão" onclick="insert('*')">X</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><button class="botão" onclick="insert('7')">7</button></td>
+                            <td><button class="botão" onclick="insert('8')">8</button></td>
+                            <td><button class="botão" onclick="insert('9')">9</button></td>
+                            <td><button class="botão" onclick="insert('-')">-</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><button class="botão"  onclick="insert('4')">4</button></td>
+                            <td><button class="botão"  onclick="insert('5')">5</button></td>
+                            <td><button class="botão"  onclick="insert('6')">6</button></td>
+                            <td><button class="botão"  onclick="insert('+')">+</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><button class="botão"  onclick="insert('1')">1</button></td>      
+                            <td><button class="botão"  onclick="insert('2')">2</button></td>
+                            <td><button class="botão"  onclick="insert('3')">3</button></td>
+                            <td rowspan="2"><button class="botão"  onclick="calcular('=')" style="height:106px;">=</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2"><button class="botão" onclick="insert ('0')" style="width:106px;">0</button></td>
+                            <td><button class="botão" onclick="insert('.')">.</button></td>
+                        
+                    </table>
+
+                    </div>
+                    </div> 
+
+                <script>
+                        function insert(num){
+                        var numero= document.getElementById('Resultado').innerHTML;
+                        document.getElementById('Resultado').innerHTML = numero + num  
+                                        }
+
+                        function clean(){
+                            document. getElementById('Resultado'). innerHTML="";
+                                        }
+
+                        function back(){
+                            var Resultado = document. getElementById('Resultado').innerHTML;
+                            document.getElementById('Resultado').innerHTML=Resultado.substring(0, Resultado.length -1);
+                                        }
+                        
+                        function calcular(){
+                            var Resultado = document. getElementById('Resultado').innerHTML;
+                            if(Resultado)
+                            {
+                            document. getElementById('Resultado').innerHTML= eval(Resultado);
+                            }
+                            }
+                </script>
+         </body>
 </html>
